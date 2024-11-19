@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using projetoAgendaSolo.Data;
+using projetoAgendaSolo.VariableGlobal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,43 +14,44 @@ namespace projetoAgendaSolo.Controller
 {
     internal class UsuarioController
     {
-        public bool AddUsuario(string nome, string usuario, string telefone, string senha)
+        public bool addUsuario(string nome, string usuario, string telefone, string senha)
         {
-            using(MySqlConnection conn = ConexaoDB.CriaConexao())
+            MySqlConnection conn = null;
+            try
             {
-                try
+                conn = ConexaoDB.CriaConexao();
+                conn.Open();
+                string sql = $"INSERT INTO usuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);" +
+                    $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '{senha}';" +
+                    $"GRANT select, insert, delete, update on dbagenda.* to '{usuario}'@'%';";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                cmd.Parameters.AddWithValue("@telefone", telefone);
+                cmd.Parameters.AddWithValue("@senha", senha);
+
+                int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
                 {
-                    conn.Open();
-
-                    string sql = "INSERT INTO usuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-                    cmd.Parameters.AddWithValue("@nome", nome);
-                    cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.Parameters.AddWithValue("@telefone", telefone);
-                    cmd.Parameters.AddWithValue("@senha", senha);
-
-                    int linhasAfetadas = cmd.ExecuteNonQuery();
-
-                    if(linhasAfetadas > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }catch (Exception e)
+                    return true;
+                }
+                else
                 {
-                    MessageBox.Show($"ERRO AO CADASTRAR: {e.Message}");
                     return false;
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Erro ao cadastrar: {e.Message}");
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         public bool ValidaLogin(string usuario, string senha)
@@ -96,7 +99,7 @@ namespace projetoAgendaSolo.Controller
             {
                 try
                 {
-                    string sql = "SELECT usuarios.idUsuario AS 'Código', usuarios.nome AS 'Nome', usuarios.usuario AS 'Usuário', usuarios.telefone AS 'Telefône' FROM usuarios;";
+                    string sql = "SELECT usuarios.idusuarios AS 'Código', usuarios.nome AS 'Nome', usuarios.usuario AS 'Usuário', usuarios.telefone AS 'Telefône' FROM usuarios;";
 
                     conn.Open();
 
@@ -128,7 +131,7 @@ namespace projetoAgendaSolo.Controller
                 {
                     conn.Open();
 
-                    string sql = "DELETE FROM usuarios WHERE idUsuario = @ValorId;";
+                    string sql = "DELETE FROM usuarios WHERE idusuarios = @ValorId;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 

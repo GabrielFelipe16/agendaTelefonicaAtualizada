@@ -1,3 +1,5 @@
+using projetoAgendaSolo.View;
+
 namespace projetoAgendaSolo
 {
     internal static class Program
@@ -12,6 +14,7 @@ namespace projetoAgendaSolo
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new frm_login());
+            //Application.Run(new frm_testes());
         }
     }
 }

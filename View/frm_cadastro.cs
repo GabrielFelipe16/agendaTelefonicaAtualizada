@@ -46,7 +46,7 @@ namespace projetoAgendaSolo.View
         {
             UsuarioController addUsuario = new UsuarioController();
 
-            bool resultado = addUsuario.AddUsuario(txt_campo_nome.Text, txt_campo_usuario.Text, txt_campo_telefone.Text, txt_campo_senha.Text);
+            bool resultado = addUsuario.addUsuario(txt_campo_nome.Text, txt_campo_usuario.Text, txt_campo_telefone.Text, txt_campo_senha.Text);
             if (resultado)
             {
                 DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

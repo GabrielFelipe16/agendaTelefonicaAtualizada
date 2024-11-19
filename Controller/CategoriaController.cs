@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using projetoAgendaSolo.Data;
+using projetoAgendaSolo.VariableGlobal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -43,7 +44,7 @@ namespace projetoAgendaSolo.Controller
 
         public bool AddCategoria(string categoria)
         {
-            using (MySqlConnection conn = ConexaoDB.CriaConexao())
+            using (MySqlConnection conn = ConexaoDB.CriaConexao(UserSession.usuario, UserSession.senha))
             {
                 try
                 {

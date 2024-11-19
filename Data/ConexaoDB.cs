@@ -17,5 +17,14 @@ namespace projetoAgendaSolo.Data
 
             return conn;
         }
+
+        static public MySqlConnection CriaConexao(string usuario, string senha)
+        {
+            string strConn = $"Server=%;Database=dbagenda;User ID={usuario};password={senha};";
+
+            MySqlConnection conn = new MySqlConnection(strConn);
+
+            return conn;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using MySqlX.XDevAPI;
 using projetoAgendaSolo.Data;
 using projetoAgendaSolo.VariableGlobal;
+using projetoAgendaSolo.View;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -73,6 +74,10 @@ namespace projetoAgendaSolo.Controller
                     {
                         if (reader.Read())
                         {
+                            UserSession.usuario = usuario;
+                            UserSession.senha = senha;
+
+
                             return true;
                         }
                         else
@@ -81,6 +86,9 @@ namespace projetoAgendaSolo.Controller
                             return false;
                         }
                     }
+
+                    
+
                 }catch(Exception e)
                 {
                     MessageBox.Show($"ERRO AO FAZER LOGIN: {e.Message}");

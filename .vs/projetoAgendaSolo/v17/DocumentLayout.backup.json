@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabri\\Desktop\\projetoAgendaSolo\\",
+  "WorkspaceRootPath": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\projetoagendasolo\\view\\frm_alterar_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_alterar_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\aluno\\desktop\\agendatelefonicaatualizada\\controller\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:controller\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\projetoagendasolo\\view\\frm_alterar_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_alterar_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\aluno\\desktop\\agendatelefonicaatualizada\\data\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:data\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\aluno\\desktop\\agendatelefonicaatualizada\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\aluno\\desktop\\agendatelefonicaatualizada\\view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\aluno\\desktop\\agendatelefonicaatualizada\\view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -34,27 +46,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_alterar_cadastro.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\projetoAgendaSolo\\View\\frm_alterar_cadastro.cs",
-              "RelativeDocumentMoniker": "View\\frm_alterar_cadastro.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\projetoAgendaSolo\\View\\frm_alterar_cadastro.cs*",
-              "RelativeToolTip": "View\\frm_alterar_cadastro.cs*",
-              "ViewState": "AgIAAFIAAAAAAAAAAADgv2IAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Controller\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Controller\\UsuarioController.cs",
+              "RelativeToolTip": "Controller\\UsuarioController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwEwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T17:35:14.194Z",
+              "WhenOpened": "2024-11-19T17:14:20.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConexaoDB.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Data\\ConexaoDB.cs",
+              "RelativeDocumentMoniker": "Data\\ConexaoDB.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Data\\ConexaoDB.cs",
+              "RelativeToolTip": "Data\\ConexaoDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:55:48.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frm_alterar_cadastro.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\projetoAgendaSolo\\View\\frm_alterar_cadastro.cs",
-              "RelativeDocumentMoniker": "View\\frm_alterar_cadastro.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\projetoAgendaSolo\\View\\frm_alterar_cadastro.cs [Projeto]*",
-              "RelativeToolTip": "View\\frm_alterar_cadastro.cs [Projeto]*",
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Controller\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controller\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\Controller\\CategoriaController.cs*",
+              "RelativeToolTip": "Controller\\CategoriaController.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAC3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:48:47.641Z",
+              "WhenOpened": "2024-11-19T16:52:31.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frm_cadastro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs",
+              "RelativeDocumentMoniker": "View\\frm_cadastro.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs [Projeto]",
+              "RelativeToolTip": "View\\frm_cadastro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:49:14.072Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frm_login.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_login.cs",
+              "RelativeDocumentMoniker": "View\\frm_login.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_login.cs [Projeto]",
+              "RelativeToolTip": "View\\frm_login.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T17:18:47.274Z",
               "EditorCaption": " [Projeto]"
             }
           ]

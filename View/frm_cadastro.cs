@@ -52,9 +52,9 @@ namespace projetoAgendaSolo.View
                 DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if(mensagemEfetuado == DialogResult.OK)
                 {
-                    frm_menu janela_menu = new frm_menu();
+                    frm_login janela_login = new frm_login();
                     this.Hide();
-                    janela_menu.ShowDialog();
+                    janela_login.ShowDialog();
                 }
             }
         }

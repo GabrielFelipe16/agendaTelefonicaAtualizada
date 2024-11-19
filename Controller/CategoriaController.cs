@@ -18,7 +18,7 @@ namespace projetoAgendaSolo.Controller
             {
                 try
                 {
-                    string sql = "SELECT categorias.id_categoria AS 'Código', categorias.categoria AS 'Categoria' FROM categorias;";
+                    string sql = $"SELECT categorias.id_categoria AS 'Código', categorias.categoria AS 'Categoria' FROM categorias WHERE categorias.usuario = '{UserSession.usuario + "@localhost"}';";
 
                     conn.Open();
 

@@ -101,35 +101,35 @@ namespace projetoAgendaSolo.Controller
             }
         }
 
-        public DataTable GetUsuario()
-        {
-            using (MySqlConnection conn = ConexaoDB.CriaConexao())
-            {
-                try
-                {
-                    string sql = "SELECT usuarios.idusuarios AS 'Código', usuarios.nome AS 'Nome', usuarios.usuario AS 'Usuário', usuarios.telefone AS 'Telefône' FROM usuarios;";
+        //public DataTable GetUsuario()
+        //{
+        //    using (MySqlConnection conn = ConexaoDB.CriaConexao())
+        //    {
+        //        try
+        //        {
+        //            string sql = "SELECT usuarios.idusuarios AS 'Código', usuarios.nome AS 'Nome', usuarios.usuario AS 'Usuário', usuarios.telefone AS 'Telefône' FROM usuarios;";
 
-                    conn.Open();
+        //            conn.Open();
 
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+        //            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
-                    DataTable dt = new DataTable();
+        //            DataTable dt = new DataTable();
 
-                    adapter.Fill(dt);
+        //            adapter.Fill(dt);
 
-                    return dt;
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show($"ERRO AO BUSCAR USUÁRIOS: {e.Message}");
-                    return new DataTable();
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
-        }
+        //            return dt;
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            MessageBox.Show($"ERRO AO BUSCAR USUÁRIOS: {e.Message}");
+        //            return new DataTable();
+        //        }
+        //        finally
+        //        {
+        //            conn.Close();
+        //        }
+        //    }
+        //}
 
         public bool DropUser(int id)
         {

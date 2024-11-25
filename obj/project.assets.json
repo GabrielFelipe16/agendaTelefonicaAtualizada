@@ -1609,19 +1609,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aluno\\.nuget\\packages\\": {}
+    "C:\\Users\\SENAI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\projetoAgendaSolo.csproj",
+      "projectUniqueName": "C:\\Users\\SENAI\\Desktop\\agendaTelefonicaAtualizada\\projetoAgendaSolo.csproj",
       "projectName": "projetoAgendaSolo",
-      "projectPath": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\projetoAgendaSolo.csproj",
-      "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aluno\\Desktop\\agendaTelefonicaAtualizada\\obj\\",
+      "projectPath": "C:\\Users\\SENAI\\Desktop\\agendaTelefonicaAtualizada\\projetoAgendaSolo.csproj",
+      "packagesPath": "C:\\Users\\SENAI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SENAI\\Desktop\\agendaTelefonicaAtualizada\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SENAI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1629,6 +1634,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

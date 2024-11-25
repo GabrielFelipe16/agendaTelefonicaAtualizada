@@ -38,7 +38,7 @@ namespace projetoAgendaSolo.View
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_alterar_cadastro janela_alterar_cadastro = new frm_alterar_cadastro();
+            frm_alterar_categoria janela_alterar_cadastro = new frm_alterar_categoria();
             this.Hide();
             janela_alterar_cadastro.ShowDialog();
         }

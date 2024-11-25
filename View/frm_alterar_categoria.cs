@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace projetoAgendaSolo.View
 {
-    public partial class frm_alterar_cadastro : Form
+    public partial class frm_alterar_categoria : Form
     {
         private void AtualizaDataGrid()
         {
-            UsuarioController usuarioController = new UsuarioController();
+            CategoriaController getCategorias = new CategoriaController();
 
-            DataTable tabela = usuarioController.GetUsuario();
+            DataTable tabela = getCategorias.GetCategorias();
 
-            dgv_usuario.DataSource = tabela;
+            dgv_categoria.DataSource = tabela;
         }
 
-        public frm_alterar_cadastro()
+        public frm_alterar_categoria()
         {
             InitializeComponent();
         }
@@ -39,15 +39,15 @@ namespace projetoAgendaSolo.View
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            UsuarioController updateCadastro = new UsuarioController();
+            CategoriaController updateCategoria = new CategoriaController();
 
-            int usuarioId = Convert.ToInt32(dgv_usuario.SelectedRows[0].Cells["Código"].Value);
+            int categoriaId = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells["Código"].Value);
 
-            bool resultado = updateCadastro.AlterUser(usuarioId, txt_campo_nome.Text, txt_campo_usuario.Text, txt_campo_telefone.Text, txt_campo_senha.Text);
+            bool resultado = updateCategoria.AlterCategoria(categoriaId, txt_campo_categoria.Text);
 
             if (resultado)
             {
-                MessageBox.Show("Cadastro alterado com sucesso");
+                MessageBox.Show("Categoria alterada com sucesso");
             }
             else
             {
@@ -59,25 +59,21 @@ namespace projetoAgendaSolo.View
 
         private void dgv_usuario_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_usuario.SelectedRows.Count > 0)
+            if (dgv_categoria.SelectedRows.Count > 0)
             {
-                string nome = Convert.ToString(dgv_usuario.SelectedRows[0].Cells["Nome"].Value);
-                string usuario = Convert.ToString(dgv_usuario.SelectedRows[0].Cells["Usuário"].Value);
-                string telefone = Convert.ToString(dgv_usuario.SelectedRows[0].Cells["Telefône"].Value);
+                string categoria = Convert.ToString(dgv_categoria.SelectedRows[0].Cells["Categoria"].Value);
 
-                txt_campo_nome.Text = nome;
-                txt_campo_usuario.Text = usuario;
-                txt_campo_telefone.Text = telefone;
+                txt_campo_categoria.Text = categoria;
             }
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            UsuarioController deleteUsuario = new UsuarioController();
+            CategoriaController deleteCategoria = new CategoriaController();
 
-            int usuario = Convert.ToInt32(dgv_usuario.SelectedRows[0].Cells["Código"].Value);
+            int categorias = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells["Código"].Value);
 
-            bool resultado = deleteUsuario.DropUser(usuario);
+            bool resultado = deleteCategoria.DropCategoria(categorias);
 
             if (resultado == false)
             {
@@ -99,6 +95,16 @@ namespace projetoAgendaSolo.View
             frm_menu janela_menu = new frm_menu();
             this.Hide();
             janela_menu.ShowDialog();
+        }
+
+        private void dgv_usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

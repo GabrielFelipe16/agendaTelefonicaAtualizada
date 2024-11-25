@@ -81,7 +81,7 @@ namespace projetoAgendaSolo.Controller
 
         public bool DropCategoria(int chavePrimaria)
         {
-            using (MySqlConnection conn = ConexaoDB.CriaConexao())
+            using (MySqlConnection conn = ConexaoDB.CriaConexao(UserSession.usuario, UserSession.senha))
             {
                 try
                 {
@@ -106,6 +106,44 @@ namespace projetoAgendaSolo.Controller
                 catch (Exception e)
                 {
                     MessageBox.Show($"Erro ao deletar: {e.Message}");
+                    return false;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public bool AlterCategoria(int id, string newCategoria)
+        {
+            using (MySqlConnection conn = ConexaoDB.CriaConexao(UserSession.usuario, UserSession.senha))
+            {
+                try
+                {
+                    conn.Open();
+
+                    string sql = "UPDATE categorias SET categoria = @valorcategoria WHERE id_categoria = @valorId;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@valorId", id);
+                    cmd.Parameters.AddWithValue("@valorcategoria", newCategoria);
+
+                    int linasAfetadas = cmd.ExecuteNonQuery();
+
+                    if (linasAfetadas > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"ERRO AO ALTERAR CATEGORIA: {e.Message}");
                     return false;
                 }
                 finally

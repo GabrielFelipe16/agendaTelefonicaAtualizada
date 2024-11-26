@@ -13,6 +13,7 @@ namespace projetoAgendaSolo.View
 {
     public partial class frm_cadastro : Form
     {
+
         private void verificaCadastroValido()
         {
             //criando uma variavel booleana que faz as verificações de campos obrigatórios 
@@ -50,7 +51,7 @@ namespace projetoAgendaSolo.View
             if (resultado)
             {
                 DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if(mensagemEfetuado == DialogResult.OK)
+                if (mensagemEfetuado == DialogResult.OK)
                 {
                     frm_login janela_login = new frm_login();
                     this.Hide();
@@ -87,6 +88,11 @@ namespace projetoAgendaSolo.View
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

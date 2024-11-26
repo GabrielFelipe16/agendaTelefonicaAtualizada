@@ -49,30 +49,35 @@
             groupBox1.Controls.Add(txt_campo_telefone);
             groupBox1.Controls.Add(txt_campo_usuario);
             groupBox1.Font = new Font("Segoe UI", 16F);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(10, 9);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(406, 529);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(355, 397);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cadastro";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // txt_campo_nome
             // 
             txt_campo_nome.Font = new Font("Segoe UI", 16F);
-            txt_campo_nome.Location = new Point(12, 42);
+            txt_campo_nome.Location = new Point(10, 32);
+            txt_campo_nome.Margin = new Padding(3, 2, 3, 2);
             txt_campo_nome.Multiline = true;
             txt_campo_nome.Name = "txt_campo_nome";
             txt_campo_nome.PlaceholderText = "Nome: João";
-            txt_campo_nome.Size = new Size(381, 58);
+            txt_campo_nome.Size = new Size(334, 44);
             txt_campo_nome.TabIndex = 0;
             txt_campo_nome.TextChanged += txt_campo_nome_TextChanged;
             // 
             // btn_cancelar
             // 
             btn_cancelar.BackColor = Color.FromArgb(255, 128, 128);
-            btn_cancelar.Location = new Point(12, 467);
+            btn_cancelar.Location = new Point(10, 350);
+            btn_cancelar.Margin = new Padding(3, 2, 3, 2);
             btn_cancelar.Name = "btn_cancelar";
-            btn_cancelar.Size = new Size(381, 44);
+            btn_cancelar.Size = new Size(333, 33);
             btn_cancelar.TabIndex = 1;
             btn_cancelar.Text = "Cancelar";
             btn_cancelar.UseVisualStyleBackColor = false;
@@ -82,9 +87,10 @@
             // 
             btn_cadastrar.BackColor = Color.FromArgb(128, 255, 128);
             btn_cadastrar.Enabled = false;
-            btn_cadastrar.Location = new Point(12, 417);
+            btn_cadastrar.Location = new Point(10, 313);
+            btn_cadastrar.Margin = new Padding(3, 2, 3, 2);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(381, 44);
+            btn_cadastrar.Size = new Size(333, 33);
             btn_cadastrar.TabIndex = 1;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = false;
@@ -93,56 +99,61 @@
             // txt_campo_confirma_senha
             // 
             txt_campo_confirma_senha.Font = new Font("Segoe UI", 16F);
-            txt_campo_confirma_senha.Location = new Point(12, 298);
+            txt_campo_confirma_senha.Location = new Point(10, 224);
+            txt_campo_confirma_senha.Margin = new Padding(3, 2, 3, 2);
             txt_campo_confirma_senha.Multiline = true;
             txt_campo_confirma_senha.Name = "txt_campo_confirma_senha";
             txt_campo_confirma_senha.PasswordChar = '*';
             txt_campo_confirma_senha.PlaceholderText = "Confirmar Senha";
-            txt_campo_confirma_senha.Size = new Size(381, 58);
+            txt_campo_confirma_senha.Size = new Size(334, 44);
             txt_campo_confirma_senha.TabIndex = 0;
             txt_campo_confirma_senha.TextChanged += txt_campo_confirma_senha_TextChanged;
             // 
             // txt_campo_senha
             // 
             txt_campo_senha.Font = new Font("Segoe UI", 16F);
-            txt_campo_senha.Location = new Point(12, 234);
+            txt_campo_senha.Location = new Point(10, 176);
+            txt_campo_senha.Margin = new Padding(3, 2, 3, 2);
             txt_campo_senha.Multiline = true;
             txt_campo_senha.Name = "txt_campo_senha";
             txt_campo_senha.PasswordChar = '*';
             txt_campo_senha.PlaceholderText = "Senha";
-            txt_campo_senha.Size = new Size(381, 58);
+            txt_campo_senha.Size = new Size(334, 44);
             txt_campo_senha.TabIndex = 0;
             txt_campo_senha.TextChanged += txt_campo_senha_TextChanged;
             // 
             // txt_campo_telefone
             // 
             txt_campo_telefone.Font = new Font("Segoe UI", 16F);
-            txt_campo_telefone.Location = new Point(12, 170);
+            txt_campo_telefone.Location = new Point(10, 128);
+            txt_campo_telefone.Margin = new Padding(3, 2, 3, 2);
             txt_campo_telefone.Multiline = true;
             txt_campo_telefone.Name = "txt_campo_telefone";
             txt_campo_telefone.PlaceholderText = "Telefone: (DDD) xxxxx-xxxx";
-            txt_campo_telefone.Size = new Size(381, 58);
+            txt_campo_telefone.Size = new Size(334, 44);
             txt_campo_telefone.TabIndex = 0;
             txt_campo_telefone.TextChanged += txt_campo_telefone_TextChanged;
             // 
             // txt_campo_usuario
             // 
             txt_campo_usuario.Font = new Font("Segoe UI", 16F);
-            txt_campo_usuario.Location = new Point(12, 106);
+            txt_campo_usuario.Location = new Point(10, 80);
+            txt_campo_usuario.Margin = new Padding(3, 2, 3, 2);
             txt_campo_usuario.Multiline = true;
             txt_campo_usuario.Name = "txt_campo_usuario";
             txt_campo_usuario.PlaceholderText = "Usuario: João123";
-            txt_campo_usuario.Size = new Size(381, 58);
+            txt_campo_usuario.Size = new Size(334, 44);
             txt_campo_usuario.TabIndex = 0;
             txt_campo_usuario.TextChanged += txt_campo_usuario_TextChanged;
             // 
             // frm_cadastro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(427, 551);
+            ClientSize = new Size(374, 413);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frm_cadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agenda Telefônica: Cadastro";

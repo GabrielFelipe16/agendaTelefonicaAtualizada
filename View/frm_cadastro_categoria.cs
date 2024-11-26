@@ -78,10 +78,6 @@ namespace projetoAgendaSolo.View
                     MessageBox.Show("Falhou");
                 }
             }
-           
-
-            
-
             AtualizaDataGrid();
         }
 

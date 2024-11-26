@@ -34,6 +34,7 @@
             editarToolStripMenuItem = new ToolStripMenuItem();
             categoriaToolStripMenuItem = new ToolStripMenuItem();
             usuarioToolStripMenuItem = new ToolStripMenuItem();
+            lbl_boas_vindas = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -72,16 +73,26 @@
             // categoriaToolStripMenuItem
             // 
             categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            categoriaToolStripMenuItem.Size = new Size(180, 22);
+            categoriaToolStripMenuItem.Size = new Size(178, 22);
             categoriaToolStripMenuItem.Text = "&Cadastrar Categoria";
             categoriaToolStripMenuItem.Click += categoriaToolStripMenuItem_Click;
             // 
             // usuarioToolStripMenuItem
             // 
             usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            usuarioToolStripMenuItem.Size = new Size(180, 22);
+            usuarioToolStripMenuItem.Size = new Size(178, 22);
             usuarioToolStripMenuItem.Text = "&Alterar Categoria";
             usuarioToolStripMenuItem.Click += usuarioToolStripMenuItem_Click;
+            // 
+            // lbl_boas_vindas
+            // 
+            lbl_boas_vindas.AutoSize = true;
+            lbl_boas_vindas.Font = new Font("Segoe UI", 16F);
+            lbl_boas_vindas.Location = new Point(193, 73);
+            lbl_boas_vindas.Name = "lbl_boas_vindas";
+            lbl_boas_vindas.Size = new Size(71, 30);
+            lbl_boas_vindas.TabIndex = 1;
+            lbl_boas_vindas.Text = "label1";
             // 
             // frm_menu
             // 
@@ -89,6 +100,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(700, 338);
+            Controls.Add(lbl_boas_vindas);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
@@ -96,6 +108,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agenda Telefônica: Menu";
             FormClosed += frm_menu_FormClosed;
+            Load += frm_menu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -110,5 +123,6 @@
         private ToolStripMenuItem editarToolStripMenuItem;
         private ToolStripMenuItem categoriaToolStripMenuItem;
         private ToolStripMenuItem usuarioToolStripMenuItem;
+        private Label lbl_boas_vindas;
     }
 }

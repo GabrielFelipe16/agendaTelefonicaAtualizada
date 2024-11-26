@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            btn_excluir = new Button();
             btn_alterar = new Button();
             txt_campo_categoria = new TextBox();
             dgv_categoria = new DataGridView();
@@ -44,7 +43,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btn_excluir);
             groupBox1.Controls.Add(btn_alterar);
             groupBox1.Controls.Add(txt_campo_categoria);
             groupBox1.Font = new Font("Segoe UI", 16F);
@@ -58,27 +56,14 @@
             groupBox1.Text = "Alterar Categoria";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // btn_excluir
-            // 
-            btn_excluir.BackColor = Color.FromArgb(255, 128, 128);
-            btn_excluir.Font = new Font("Segoe UI", 12F);
-            btn_excluir.Location = new Point(4, 129);
-            btn_excluir.Margin = new Padding(3, 2, 3, 2);
-            btn_excluir.Name = "btn_excluir";
-            btn_excluir.Size = new Size(284, 27);
-            btn_excluir.TabIndex = 3;
-            btn_excluir.Text = "&Excluir";
-            btn_excluir.UseVisualStyleBackColor = false;
-            btn_excluir.Click += btn_excluir_Click;
-            // 
             // btn_alterar
             // 
             btn_alterar.BackColor = Color.FromArgb(128, 255, 128);
             btn_alterar.Font = new Font("Segoe UI", 12F);
-            btn_alterar.Location = new Point(4, 98);
+            btn_alterar.Location = new Point(4, 115);
             btn_alterar.Margin = new Padding(3, 2, 3, 2);
             btn_alterar.Name = "btn_alterar";
-            btn_alterar.Size = new Size(284, 27);
+            btn_alterar.Size = new Size(284, 40);
             btn_alterar.TabIndex = 2;
             btn_alterar.Text = "&Alterar";
             btn_alterar.UseVisualStyleBackColor = false;
@@ -173,7 +158,6 @@
         private Button btn_alterar;
         private TextBox txt_campo_categoria;
         private DataGridView dgv_categoria;
-        private Button btn_excluir;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem arquivoToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;

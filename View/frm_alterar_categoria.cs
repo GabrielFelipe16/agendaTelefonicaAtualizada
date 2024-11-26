@@ -40,19 +40,30 @@ namespace projetoAgendaSolo.View
         private void btn_alterar_Click(object sender, EventArgs e)
         {
             CategoriaController updateCategoria = new CategoriaController();
-
-            int categoriaId = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells["Código"].Value);
-
-            bool resultado = updateCategoria.AlterCategoria(categoriaId, txt_campo_categoria.Text);
-
-            if (resultado)
+            if(txt_campo_categoria.Text.Length <= 0)
             {
-                MessageBox.Show("Categoria alterada com sucesso");
+                MessageBox.Show("Preencha o campo (Alterar categoria)");
+            }
+            if (dgv_categoria.SelectedCells.Count <= 0){
+                MessageBox.Show("Selecione uma categoria ara ser alterada");
             }
             else
             {
-                MessageBox.Show("Erro");
+                int categoriaId = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells["Código"].Value);
+
+                bool resultado = updateCategoria.AlterCategoria(categoriaId, txt_campo_categoria.Text);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Categoria alterada com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro");
+                }
             }
+
+            
 
             AtualizaDataGrid();
         }
@@ -65,22 +76,6 @@ namespace projetoAgendaSolo.View
 
                 txt_campo_categoria.Text = categoria;
             }
-        }
-
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
-            CategoriaController deleteCategoria = new CategoriaController();
-
-            int categorias = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells["Código"].Value);
-
-            bool resultado = deleteCategoria.DropCategoria(categorias);
-
-            if (resultado == false)
-            {
-                MessageBox.Show("Falhou");
-            }
-
-            AtualizaDataGrid();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

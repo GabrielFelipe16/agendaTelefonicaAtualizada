@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projetoAgendaSolo.VariableGlobal;
 
 namespace projetoAgendaSolo.View
 {
@@ -41,6 +42,12 @@ namespace projetoAgendaSolo.View
             frm_alterar_categoria janela_alterar_cadastro = new frm_alterar_categoria();
             this.Hide();
             janela_alterar_cadastro.ShowDialog();
+        }
+
+        private void frm_menu_Load(object sender, EventArgs e)
+        {
+            string mensagem = $"Olá {UserSession.nome}, Seja bem-vindo(a)";
+            lbl_boas_vindas.Text = mensagem;
         }
     }
 }

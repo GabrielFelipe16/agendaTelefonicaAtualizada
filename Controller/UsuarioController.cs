@@ -36,6 +36,7 @@ namespace projetoAgendaSolo.Controller
 
                 if (linhasAfetadas > 0)
                 {
+
                     return true;
                 }
                 else
@@ -57,13 +58,13 @@ namespace projetoAgendaSolo.Controller
 
         public bool ValidaLogin(string usuario, string senha)
         {
-            using(MySqlConnection conn = ConexaoDB.CriaConexao())
+            using (MySqlConnection conn = ConexaoDB.CriaConexao())
             {
                 try
                 {
                     conn.Open();
 
-                    string sql = "SELECT usuarios.usuario, usuarios.senha FROM usuarios WHERE usuario = @valorUsuario AND senha = @valorSenha;";
+                    string sql = "SELECT usuarios.idUsuario, usuarios.nome AS 'nome', usuarios.usuario, usuarios.telefone FROM usuarios WHERE usuario = @valorUsuario AND senha = @valorSenha;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -76,7 +77,7 @@ namespace projetoAgendaSolo.Controller
                         {
                             UserSession.usuario = usuario;
                             UserSession.senha = senha;
-
+                            UserSession.nome = reader.GetString("nome");
 
                             return true;
                         }
@@ -87,9 +88,10 @@ namespace projetoAgendaSolo.Controller
                         }
                     }
 
-                    
 
-                }catch(Exception e)
+
+                }
+                catch (Exception e)
                 {
                     MessageBox.Show($"ERRO AO FAZER LOGIN: {e.Message}");
                     return false;

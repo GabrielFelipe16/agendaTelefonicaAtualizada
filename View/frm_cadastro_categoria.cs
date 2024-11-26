@@ -64,14 +64,23 @@ namespace projetoAgendaSolo.View
         {
             CategoriaController deleteCategoria = new CategoriaController();
 
-            int categorias = Convert.ToInt32(dgv_Categoria.SelectedRows[0].Cells["Código"].Value);
-
-            bool resultado = deleteCategoria.DropCategoria(categorias);
-
-            if (resultado == false)
+            if (dgv_Categoria.SelectedCells.Count == 0)
             {
-                MessageBox.Show("Falhou");
+                MessageBox.Show("Selecione uma linha primeiro");
             }
+            else
+            {
+                int categorias = Convert.ToInt32(dgv_Categoria.SelectedRows[0].Cells["Código"].Value);
+                bool resultado = deleteCategoria.DropCategoria(categorias);
+
+                if (resultado == false)
+                {
+                    MessageBox.Show("Falhou");
+                }
+            }
+           
+
+            
 
             AtualizaDataGrid();
         }

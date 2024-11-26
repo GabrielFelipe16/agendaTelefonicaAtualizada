@@ -35,13 +35,14 @@
             categoriaToolStripMenuItem = new ToolStripMenuItem();
             usuarioToolStripMenuItem = new ToolStripMenuItem();
             lbl_boas_vindas = new Label();
+            agendaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem, agendaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -94,6 +95,13 @@
             lbl_boas_vindas.TabIndex = 1;
             lbl_boas_vindas.Text = "label1";
             // 
+            // agendaToolStripMenuItem
+            // 
+            agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
+            agendaToolStripMenuItem.Size = new Size(60, 20);
+            agendaToolStripMenuItem.Text = "&Agenda";
+            agendaToolStripMenuItem.Click += agendaToolStripMenuItem_Click;
+            // 
             // frm_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -124,5 +132,6 @@
         private ToolStripMenuItem categoriaToolStripMenuItem;
         private ToolStripMenuItem usuarioToolStripMenuItem;
         private Label lbl_boas_vindas;
+        private ToolStripMenuItem agendaToolStripMenuItem;
     }
 }

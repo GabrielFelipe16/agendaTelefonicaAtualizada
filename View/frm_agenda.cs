@@ -13,7 +13,9 @@ namespace projetoAgendaSolo.View
 {
     public partial class frm_agenda : Form
     {
-
+        public string nome = null;
+        public string telefone = null;
+        public string categoria = null;
         private void AtualizaDataGrid()
         {
             AgendaController pegaAgenda = new AgendaController();
@@ -30,7 +32,9 @@ namespace projetoAgendaSolo.View
 
         private void btn_cadastrar_novo_Click(object sender, EventArgs e)
         {
-
+            frm_cadastrar_contato_agenda janela_cadastrar_contato = new frm_cadastrar_contato_agenda();
+            this.Hide();
+            janela_cadastrar_contato.ShowDialog();
         }
 
         private void frm_agenda_Load(object sender, EventArgs e)
@@ -62,6 +66,13 @@ namespace projetoAgendaSolo.View
         private void btn_alterar_cadastro_Click(object sender, EventArgs e)
         {
 
+            frm_alterar_contato janela_alterar_contato = new frm_alterar_contato();
+            janela_alterar_contato.nome = nome;
+            janela_alterar_contato.telefone = telefone;
+            janela_alterar_contato.categoria = categoria;
+            this.Hide();
+            janela_alterar_contato.ShowDialog();
+
         }
 
         private void dgv_agenda_SelectionChanged(object sender, EventArgs e)
@@ -69,11 +80,14 @@ namespace projetoAgendaSolo.View
             if (dgv_agenda.SelectedRows.Count > 0)
             {
                 string nome = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Nome"].Value);
-                string telefone = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Telefone"].Value);
-                string categoria = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Categoria"].Value);
-
-                
+                string categoria = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Telefone"].Value);
+                string telefone = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Categoria"].Value);
             }
+        }
+
+        private void frm_agenda_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

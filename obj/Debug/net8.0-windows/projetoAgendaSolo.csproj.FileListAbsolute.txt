@@ -144,3 +144,6 @@ C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8
 C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\projetoAgendaSolo.pdb
 C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\projetoAgendaSolo.genruntimeconfig.cache
 C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\ref\projetoAgendaSolo.dll
+C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\projetoAgendaSolo.View.frm_agenda.resources
+C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\projetoAgendaSolo.View.frm_cadastrar_contato_agenda.resources
+C:\Users\SENAI\Desktop\GabrielFelipe16\agendaTelefonicaAtualizada\obj\Debug\net8.0-windows\projetoAgendaSolo.View.frm_alterar_contato.resources

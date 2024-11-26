@@ -15,6 +15,7 @@ namespace projetoAgendaSolo
             ApplicationConfiguration.Initialize();
             Application.Run(new frm_login());
             //Application.Run(new frm_testes());
+            //Application.Run(new frm_agenda());
         }
     }
 }

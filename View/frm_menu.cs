@@ -49,5 +49,12 @@ namespace projetoAgendaSolo.View
             string mensagem = $"Olá {UserSession.nome}, Seja bem-vindo(a)";
             lbl_boas_vindas.Text = mensagem;
         }
+
+        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_agenda janela_agenda = new frm_agenda();
+            this.Hide();
+            janela_agenda.ShowDialog();
+        }
     }
 }

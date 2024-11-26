@@ -7,6 +7,12 @@
     <Compile Update="View\frm_alterar_categoria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\frm_alterar_contato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frm_cadastrar_usuario_agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\frm_cadastro.cs">
       <SubType>Form</SubType>
     </Compile>

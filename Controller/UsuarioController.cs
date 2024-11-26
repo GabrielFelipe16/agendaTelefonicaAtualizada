@@ -64,7 +64,7 @@ namespace projetoAgendaSolo.Controller
                 {
                     conn.Open();
 
-                    string sql = "SELECT usuarios.idUsuario, usuarios.nome AS 'nome', usuarios.usuario, usuarios.telefone FROM usuarios WHERE usuario = @valorUsuario AND senha = @valorSenha;";
+                    string sql = "SELECT usuarios.idUsuario, usuarios.nome AS 'nome', usuarios.usuario, usuarios.telefone FROM usuarios WHERE usuario = @valorUsuario AND BINARY senha = @valorSenha;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 

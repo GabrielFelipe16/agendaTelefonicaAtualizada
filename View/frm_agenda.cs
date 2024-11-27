@@ -1,4 +1,5 @@
 ﻿using projetoAgendaSolo.Controller;
+using projetoAgendaSolo.VariableGlobal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,6 @@ namespace projetoAgendaSolo.View
 {
     public partial class frm_agenda : Form
     {
-        public string nome = null;
-        public string telefone = null;
-        public string categoria = null;
         private void AtualizaDataGrid()
         {
             AgendaController pegaAgenda = new AgendaController();
@@ -67,9 +65,6 @@ namespace projetoAgendaSolo.View
         {
 
             frm_alterar_contato janela_alterar_contato = new frm_alterar_contato();
-            janela_alterar_contato.nome = nome;
-            janela_alterar_contato.telefone = telefone;
-            janela_alterar_contato.categoria = categoria;
             this.Hide();
             janela_alterar_contato.ShowDialog();
 
@@ -79,15 +74,30 @@ namespace projetoAgendaSolo.View
         {
             if (dgv_agenda.SelectedRows.Count > 0)
             {
-                string nome = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Nome"].Value);
-                string categoria = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Telefone"].Value);
-                string telefone = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Categoria"].Value);
+                informationsAlterContato.nome = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Nome"].Value);
+                informationsAlterContato.telefone = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Telefone"].Value);
+                informationsAlterContato.categoria = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Categoria"].Value);
+                informationsAlterContato.cod_contato = Convert.ToInt32(dgv_agenda.SelectedRows[0].Cells["Código"].Value);
             }
         }
 
         private void frm_agenda_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_menu janela_menu = new frm_menu();
+            this.Hide();
+            janela_menu.ShowDialog();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_login janela_login = new frm_login();
+            this.Hide();
+            janela_login.ShowDialog();
         }
     }
 }

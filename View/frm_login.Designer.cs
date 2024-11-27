@@ -28,25 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txt_campo_usuario = new TextBox();
             btn_entrar = new Button();
             txt_campo_senha = new TextBox();
             groupBox1 = new GroupBox();
             lbl_link_cadastro = new LinkLabel();
             btn_cancelar = new Button();
+            panelSenha = new Panel();
+            txt_campo_usuario = new TextBox();
+            panelUsuario = new Panel();
             groupBox1.SuspendLayout();
+            panelSenha.SuspendLayout();
+            panelUsuario.SuspendLayout();
             SuspendLayout();
-            // 
-            // txt_campo_usuario
-            // 
-            txt_campo_usuario.Font = new Font("Segoe UI", 16F);
-            txt_campo_usuario.Location = new Point(12, 80);
-            txt_campo_usuario.Multiline = true;
-            txt_campo_usuario.Name = "txt_campo_usuario";
-            txt_campo_usuario.PlaceholderText = "Usuario";
-            txt_campo_usuario.Size = new Size(381, 58);
-            txt_campo_usuario.TabIndex = 0;
-            txt_campo_usuario.TextChanged += txt_campo_usuario_TextChanged;
             // 
             // btn_entrar
             // 
@@ -63,22 +56,22 @@
             // txt_campo_senha
             // 
             txt_campo_senha.Font = new Font("Segoe UI", 16F);
-            txt_campo_senha.Location = new Point(12, 155);
+            txt_campo_senha.Location = new Point(3, 4);
             txt_campo_senha.Multiline = true;
             txt_campo_senha.Name = "txt_campo_senha";
             txt_campo_senha.PasswordChar = '*';
             txt_campo_senha.PlaceholderText = "Senha";
-            txt_campo_senha.Size = new Size(381, 58);
+            txt_campo_senha.Size = new Size(375, 58);
             txt_campo_senha.TabIndex = 0;
             txt_campo_senha.TextChanged += txt_campo_senha_TextChanged;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(panelUsuario);
+            groupBox1.Controls.Add(panelSenha);
             groupBox1.Controls.Add(lbl_link_cadastro);
-            groupBox1.Controls.Add(txt_campo_usuario);
             groupBox1.Controls.Add(btn_cancelar);
             groupBox1.Controls.Add(btn_entrar);
-            groupBox1.Controls.Add(txt_campo_senha);
             groupBox1.Font = new Font("Segoe UI", 16F);
             groupBox1.Location = new Point(180, 27);
             groupBox1.Name = "groupBox1";
@@ -112,6 +105,33 @@
             btn_cancelar.UseVisualStyleBackColor = false;
             btn_cancelar.Click += btn_cancelar_Click;
             // 
+            // panelSenha
+            // 
+            panelSenha.Controls.Add(txt_campo_senha);
+            panelSenha.Location = new Point(12, 151);
+            panelSenha.Name = "panelSenha";
+            panelSenha.Size = new Size(381, 66);
+            panelSenha.TabIndex = 4;
+            // 
+            // txt_campo_usuario
+            // 
+            txt_campo_usuario.Font = new Font("Segoe UI", 16F);
+            txt_campo_usuario.Location = new Point(3, 4);
+            txt_campo_usuario.Multiline = true;
+            txt_campo_usuario.Name = "txt_campo_usuario";
+            txt_campo_usuario.PlaceholderText = "Usuario";
+            txt_campo_usuario.Size = new Size(375, 62);
+            txt_campo_usuario.TabIndex = 0;
+            txt_campo_usuario.TextChanged += txt_campo_usuario_TextChanged;
+            // 
+            // panelUsuario
+            // 
+            panelUsuario.Controls.Add(txt_campo_usuario);
+            panelUsuario.Location = new Point(12, 69);
+            panelUsuario.Name = "panelUsuario";
+            panelUsuario.Size = new Size(381, 69);
+            panelUsuario.TabIndex = 5;
+            // 
             // frm_login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -125,16 +145,21 @@
             FormClosed += frm_login_FormClosed;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            panelSenha.ResumeLayout(false);
+            panelSenha.PerformLayout();
+            panelUsuario.ResumeLayout(false);
+            panelUsuario.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TextBox txt_campo_usuario;
         private Button btn_entrar;
         private TextBox txt_campo_senha;
         private GroupBox groupBox1;
         private Button btn_cancelar;
         private LinkLabel lbl_link_cadastro;
+        private Panel panelUsuario;
+        private TextBox txt_campo_usuario;
+        private Panel panelSenha;
     }
 }

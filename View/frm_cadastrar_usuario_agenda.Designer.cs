@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             txt_campo_nome = new TextBox();
-            txt_campo_telefone = new TextBox();
             txt_campo_categoria = new TextBox();
             btn_cadastrar = new Button();
             groupBox1 = new GroupBox();
+            mtb_telefone = new MaskedTextBox();
             btn_cancelar = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -40,39 +40,35 @@
             // txt_campo_nome
             // 
             txt_campo_nome.Font = new Font("Segoe UI", 16F);
-            txt_campo_nome.Location = new Point(26, 48);
+            txt_campo_nome.Location = new Point(30, 64);
+            txt_campo_nome.Margin = new Padding(3, 4, 3, 4);
             txt_campo_nome.Multiline = true;
             txt_campo_nome.Name = "txt_campo_nome";
             txt_campo_nome.PlaceholderText = "Nome";
-            txt_campo_nome.Size = new Size(186, 55);
+            txt_campo_nome.Size = new Size(212, 72);
             txt_campo_nome.TabIndex = 0;
-            // 
-            // txt_campo_telefone
-            // 
-            txt_campo_telefone.Font = new Font("Segoe UI", 16F);
-            txt_campo_telefone.Location = new Point(26, 109);
-            txt_campo_telefone.Multiline = true;
-            txt_campo_telefone.Name = "txt_campo_telefone";
-            txt_campo_telefone.PlaceholderText = "Telefône";
-            txt_campo_telefone.Size = new Size(186, 55);
-            txt_campo_telefone.TabIndex = 1;
+            txt_campo_nome.TextChanged += txt_campo_nome_TextChanged;
             // 
             // txt_campo_categoria
             // 
             txt_campo_categoria.Font = new Font("Segoe UI", 16F);
-            txt_campo_categoria.Location = new Point(26, 170);
+            txt_campo_categoria.Location = new Point(30, 193);
+            txt_campo_categoria.Margin = new Padding(3, 4, 3, 4);
             txt_campo_categoria.Multiline = true;
             txt_campo_categoria.Name = "txt_campo_categoria";
             txt_campo_categoria.PlaceholderText = "Categoria";
-            txt_campo_categoria.Size = new Size(186, 55);
+            txt_campo_categoria.Size = new Size(212, 72);
             txt_campo_categoria.TabIndex = 2;
+            txt_campo_categoria.TextChanged += txt_campo_categoria_TextChanged;
             // 
             // btn_cadastrar
             // 
             btn_cadastrar.BackColor = Color.FromArgb(128, 255, 128);
-            btn_cadastrar.Location = new Point(26, 231);
+            btn_cadastrar.Enabled = false;
+            btn_cadastrar.Location = new Point(30, 308);
+            btn_cadastrar.Margin = new Padding(3, 4, 3, 4);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(186, 59);
+            btn_cadastrar.Size = new Size(213, 79);
             btn_cadastrar.TabIndex = 3;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = false;
@@ -80,25 +76,37 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(mtb_telefone);
             groupBox1.Controls.Add(btn_cancelar);
             groupBox1.Controls.Add(txt_campo_nome);
             groupBox1.Controls.Add(btn_cadastrar);
-            groupBox1.Controls.Add(txt_campo_telefone);
             groupBox1.Controls.Add(txt_campo_categoria);
             groupBox1.Font = new Font("Segoe UI", 16F);
-            groupBox1.Location = new Point(23, 41);
+            groupBox1.Location = new Point(26, 55);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(239, 361);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(273, 481);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cadastro de contato";
             // 
+            // mtb_telefone
+            // 
+            mtb_telefone.Location = new Point(30, 143);
+            mtb_telefone.Mask = "(00) 00000-0000";
+            mtb_telefone.Name = "mtb_telefone";
+            mtb_telefone.Size = new Size(212, 43);
+            mtb_telefone.TabIndex = 5;
+            mtb_telefone.TextChanged += mtb_telefone_TextChanged;
+            // 
             // btn_cancelar
             // 
             btn_cancelar.BackColor = Color.FromArgb(255, 128, 128);
-            btn_cancelar.Location = new Point(26, 296);
+            btn_cancelar.Location = new Point(30, 395);
+            btn_cancelar.Margin = new Padding(3, 4, 3, 4);
             btn_cancelar.Name = "btn_cancelar";
-            btn_cancelar.Size = new Size(186, 59);
+            btn_cancelar.Size = new Size(213, 79);
             btn_cancelar.TabIndex = 5;
             btn_cancelar.Text = "Cancelar";
             btn_cancelar.UseVisualStyleBackColor = false;
@@ -106,11 +114,12 @@
             // 
             // frm_cadastrar_contato_agenda
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(285, 450);
+            ClientSize = new Size(326, 600);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frm_cadastrar_contato_agenda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agenda Telefônica: Cadastro de contato";
@@ -122,10 +131,10 @@
         #endregion
 
         private TextBox txt_campo_nome;
-        private TextBox txt_campo_telefone;
         private TextBox txt_campo_categoria;
         private Button btn_cadastrar;
         private GroupBox groupBox1;
         private Button btn_cancelar;
+        private MaskedTextBox mtb_telefone;
     }
 }

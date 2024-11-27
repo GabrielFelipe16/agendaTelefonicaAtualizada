@@ -13,6 +13,23 @@ namespace projetoAgendaSolo.View
 {
     public partial class frm_cadastrar_contato_agenda : Form
     {
+
+        private void verificaCadastroValido()
+        {
+            //criando uma variavel booleana que faz as verificações de campos obrigatórios 
+            bool casoBotaoValido = txt_campo_nome.Text != "" && mtb_telefone.MaskFull && txt_campo_categoria.Text != "";
+
+            //verificando se a variavel criada acima retorna true or false
+            if (casoBotaoValido)
+            {
+                btn_cadastrar.Enabled = true;
+            }
+            else
+            {
+                btn_cadastrar.Enabled = false;
+            }
+        }
+
         public frm_cadastrar_contato_agenda()
         {
             InitializeComponent();
@@ -22,7 +39,9 @@ namespace projetoAgendaSolo.View
         {
             AgendaController addContato = new AgendaController();
 
-            bool resultado = addContato.addContato(txt_campo_nome.Text, txt_campo_telefone.Text, txt_campo_categoria.Text);
+            string telefoneFormatado = mtb_telefone.Text;
+
+            bool resultado = addContato.addContato(txt_campo_nome.Text, telefoneFormatado, txt_campo_categoria.Text);
             if (resultado)
             {
                 DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,6 +59,21 @@ namespace projetoAgendaSolo.View
             frm_agenda janela_agenda = new frm_agenda();
             this.Hide();
             janela_agenda.ShowDialog();
+        }
+
+        private void txt_campo_nome_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
+        }
+
+        private void txt_campo_categoria_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
+        }
+
+        private void mtb_telefone_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
         }
     }
 }

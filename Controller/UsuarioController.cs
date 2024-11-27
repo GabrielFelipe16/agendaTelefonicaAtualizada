@@ -83,7 +83,6 @@ namespace projetoAgendaSolo.Controller
                         }
                         else
                         {
-                            MessageBox.Show("Usuário ou senha incorretos");
                             return false;
                         }
                     }

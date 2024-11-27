@@ -50,13 +50,33 @@ namespace projetoAgendaSolo.View
             }
             else
             {
-                int cadastro = Convert.ToInt32(dgv_agenda.SelectedRows[0].Cells["Código"].Value);
-                bool resultado = deleteAgenda.deleteAgenda(cadastro);
+                DialogResult resultado = MessageBox.Show(
+                    "Você tem certeza que deseja excluir este contato?",  // Mensagem
+                    "Excluir Contato",                                    // Título da MessageBox
+                    MessageBoxButtons.YesNo,                               // Botões Sim e Não
+                    MessageBoxIcon.Question);                              // Ícone de pergunta
 
-                if (resultado == false)
+                // Verifica a resposta do usuário
+                if (resultado == DialogResult.Yes)
                 {
-                    MessageBox.Show("Falhou");
+                    int cadastro = Convert.ToInt32(dgv_agenda.SelectedRows[0].Cells["Código"].Value);
+                    bool verificaExclusao = deleteAgenda.deleteAgenda(cadastro);
+
+                    if (verificaExclusao == false)
+                    {
+                        MessageBox.Show("A EXCLUSÃO FALHOU");
+                    }
+                    else
+                    {
+                        MessageBox.Show("EXCLUSÃO CONCLUÍDA");
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("EXCLUSÃO CANCELADA");
+                }
+
+                
             }
             AtualizaDataGrid();
         }

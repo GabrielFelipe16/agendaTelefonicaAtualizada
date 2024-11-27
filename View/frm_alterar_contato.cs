@@ -15,9 +15,30 @@ namespace projetoAgendaSolo.View
 {
     public partial class frm_alterar_contato : Form
     {
-        public string nome = null;
-        public string telefone = null;
-        public string categoria = null;
+
+        private void verificaCadastroValido()
+        {
+            //criando uma variavel booleana que faz as verificações de campos obrigatórios 
+            bool casoBotaoValido = txt_campo_nome.Text != "" && mtb_telefone.MaskFull && txt_campo_categoria.Text != "";
+
+            //verificando se a variavel criada acima retorna true or false
+            if (casoBotaoValido)
+            {
+                btn_concluir.Enabled = true;
+            }
+            else
+            {
+                btn_concluir.Enabled = false;
+            }
+        }
+
+        public void carregarInformacoes()
+        {
+            txt_campo_nome.Text = informationsAlterContato.nome;
+            mtb_telefone.Text = informationsAlterContato.telefone;
+            txt_campo_categoria.Text = informationsAlterContato.categoria;
+        }
+
 
         public frm_alterar_contato()
         {
@@ -33,36 +54,64 @@ namespace projetoAgendaSolo.View
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show(
+                    "Você confirma as informações alteradas?",
+                    "Alterar Contato",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
-            AgendaController alterContato = new AgendaController();
-
-            bool resultado = alterContato.AlterContato(Convert.ToInt32(informationsAlterContato.cod_contato), txt_campo_nome.Text, txt_campo_telefone.Text, txt_campo_categoria.Text);
-
-            if (resultado)
+            if (resultado == DialogResult.Yes)
             {
 
-                DialogResult mensagemEfetuado = MessageBox.Show("Alteração efetuada!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (mensagemEfetuado == DialogResult.OK)
+                AgendaController alterContato = new AgendaController();
+
+                string telefoneFormatado = mtb_telefone.Text;
+
+                bool verificaAlteracao = alterContato.AlterContato(Convert.ToInt32(informationsAlterContato.cod_contato), txt_campo_nome.Text, telefoneFormatado, txt_campo_categoria.Text);
+
+                if (verificaAlteracao)
                 {
-                    frm_agenda janela_agenda = new frm_agenda();
-                    this.Hide();
-                    janela_agenda.ShowDialog();
+                    DialogResult mensagemEfetuado = MessageBox.Show("Alteração efetuada!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (mensagemEfetuado == DialogResult.OK)
+                    {
+                        frm_agenda janela_agenda = new frm_agenda();
+                        this.Hide();
+                        janela_agenda.ShowDialog();
+                    }
                 }
 
             }
-
+            else
+            {
+                MessageBox.Show("ALTERAÇÂO CANCELADA");
+                carregarInformacoes();
+            }
         }
 
         private void frm_alterar_contato_Load(object sender, EventArgs e)
         {
-            txt_campo_nome.Text = informationsAlterContato.nome;
-            txt_campo_telefone.Text = informationsAlterContato.telefone;
-            txt_campo_categoria.Text = informationsAlterContato.categoria;
+            carregarInformacoes();
         }
 
         private void frm_alterar_contato_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txt_campo_nome_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
+        }
+
+        private void mtb_telefone_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
+        }
+
+        private void txt_campo_categoria_TextChanged(object sender, EventArgs e)
+        {
+            verificaCadastroValido();
         }
     }
 }

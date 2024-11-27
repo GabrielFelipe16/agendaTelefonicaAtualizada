@@ -45,18 +45,33 @@ namespace projetoAgendaSolo.View
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            UsuarioController addUsuario = new UsuarioController();
+            string telefoneFormatado = mtb_telefone.Text;
 
-            bool resultado = addUsuario.addUsuario(txt_campo_nome.Text, txt_campo_usuario.Text, txt_campo_telefone.Text, txt_campo_senha.Text);
-            if (resultado)
+            DialogResult resultado = MessageBox.Show(
+                    "Você confirma as informações de cadastro?",
+                    "Cadastrar Usuario",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
             {
-                DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (mensagemEfetuado == DialogResult.OK)
+                UsuarioController addUsuario = new UsuarioController();
+
+                bool verificaCriarUsuario = addUsuario.addUsuario(txt_campo_nome.Text, txt_campo_usuario.Text, mtb_telefone.Text, txt_campo_senha.Text);
+                if (verificaCriarUsuario)
                 {
-                    frm_login janela_login = new frm_login();
-                    this.Hide();
-                    janela_login.ShowDialog();
+                    DialogResult mensagemEfetuado = MessageBox.Show("Cadastro efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (mensagemEfetuado == DialogResult.OK)
+                    {
+                        frm_login janela_login = new frm_login();
+                        this.Hide();
+                        janela_login.ShowDialog();
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Criação de usuário CANCELADA");
             }
         }
 

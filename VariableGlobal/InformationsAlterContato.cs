@@ -12,7 +12,7 @@ namespace projetoAgendaSolo.VariableGlobal
         private static string _nomeContato = null;
         private static string _telefoneContato = null;
         private static string _categoriaContato = null;
-        private static int _cod_contato;
+        private static string _cod_contato = null;
 
         public static string nome
         {
@@ -47,7 +47,7 @@ namespace projetoAgendaSolo.VariableGlobal
 
         }
 
-        public static int cod_contato
+        public static string cod_contato
         {
             get { return _cod_contato;  }
             set

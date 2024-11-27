@@ -11,8 +11,16 @@
       "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_alterar_contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\variableglobal\\informationsaltercontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:variableglobal\\informationsaltercontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\view\\frm_agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\view\\frm_agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +54,11 @@
               "Title": "frm_alterar_contato.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs",
               "RelativeDocumentMoniker": "View\\frm_alterar_contato.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs*",
-              "RelativeToolTip": "View\\frm_alterar_contato.cs*",
-              "ViewState": "AgIAABkAAAAAAAAAAAAUwDAAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs",
+              "RelativeToolTip": "View\\frm_alterar_contato.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIA1wCIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T01:04:44.019Z",
+              "WhenOpened": "2024-11-27T01:17:33.729Z",
               "EditorCaption": ""
             },
             {
@@ -59,24 +67,49 @@
               "Title": "frm_alterar_contato.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs",
               "RelativeDocumentMoniker": "View\\frm_alterar_contato.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs [Projeto]*",
-              "RelativeToolTip": "View\\frm_alterar_contato.cs [Projeto]*",
+              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_alterar_contato.cs [Projeto]",
+              "RelativeToolTip": "View\\frm_alterar_contato.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T01:04:41.379Z",
+              "WhenOpened": "2024-11-27T01:17:31.698Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frm_login.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_login.cs",
-              "RelativeDocumentMoniker": "View\\frm_login.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_login.cs",
-              "RelativeToolTip": "View\\frm_login.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAASwDsAAAARAAAAAAAAAA==",
+              "Title": "InformationsAlterContato.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\VariableGlobal\\InformationsAlterContato.cs",
+              "RelativeDocumentMoniker": "VariableGlobal\\InformationsAlterContato.cs",
+              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\VariableGlobal\\InformationsAlterContato.cs",
+              "RelativeToolTip": "VariableGlobal\\InformationsAlterContato.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA3wDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T01:04:28.481Z",
+              "WhenOpened": "2024-11-27T01:17:11.024Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frm_agenda.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_agenda.cs",
+              "RelativeDocumentMoniker": "View\\frm_agenda.cs",
+              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_agenda.cs",
+              "RelativeToolTip": "View\\frm_agenda.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAApwE8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T01:16:35.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frm_agenda.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_agenda.cs",
+              "RelativeDocumentMoniker": "View\\frm_agenda.cs",
+              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_agenda.cs [Projeto]",
+              "RelativeToolTip": "View\\frm_agenda.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T01:16:03.285Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }

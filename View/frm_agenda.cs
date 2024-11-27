@@ -77,7 +77,7 @@ namespace projetoAgendaSolo.View
                 informationsAlterContato.nome = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Nome"].Value);
                 informationsAlterContato.telefone = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Telefone"].Value);
                 informationsAlterContato.categoria = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Categoria"].Value);
-                informationsAlterContato.cod_contato = Convert.ToInt32(dgv_agenda.SelectedRows[0].Cells["Código"].Value);
+                informationsAlterContato.cod_contato = Convert.ToString(dgv_agenda.SelectedRows[0].Cells["Código"].Value);
             }
         }
 

@@ -36,7 +36,7 @@ namespace projetoAgendaSolo.View
 
             AgendaController alterContato = new AgendaController();
 
-            bool resultado = alterContato.AlterContato(informationsAlterContato.cod_contato, txt_campo_nome.Text, txt_campo_telefone.Text, txt_campo_categoria.Text);
+            bool resultado = alterContato.AlterContato(Convert.ToInt32(informationsAlterContato.cod_contato), txt_campo_nome.Text, txt_campo_telefone.Text, txt_campo_categoria.Text);
 
             if (resultado)
             {

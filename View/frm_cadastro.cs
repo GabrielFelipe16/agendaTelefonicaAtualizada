@@ -33,17 +33,7 @@ namespace projetoAgendaSolo.View
             }
         }
 
-        public frm_cadastro()
-        {
-            InitializeComponent();
-        }
-
-        private void frm_cadastro_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_cadastrar_Click(object sender, EventArgs e)
+        private void cadastrar()
         {
             string telefoneFormatado = mtb_telefone.Text;
 
@@ -73,6 +63,21 @@ namespace projetoAgendaSolo.View
             {
                 MessageBox.Show("Criação de usuário CANCELADA");
             }
+        }
+
+        public frm_cadastro()
+        {
+            InitializeComponent();
+        }
+
+        private void frm_cadastro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            cadastrar();
         }
 
         private void txt_campo_nome_TextChanged(object sender, EventArgs e)
@@ -108,6 +113,14 @@ namespace projetoAgendaSolo.View
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_campo_confirma_senha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cadastrar();
+            }
         }
     }
 }

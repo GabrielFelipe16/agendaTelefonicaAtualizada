@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\",
+  "WorkspaceRootPath": "C:\\Users\\SENAI\\Desktop\\GabrielFelipe16\\agendaTelefonicaAtualizada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\senai\\desktop\\gabrielfelipe16\\agendatelefonicaatualizada\\view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\gabri\\desktop\\agendatelefonicaatualizada\\view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|c:\\users\\senai\\desktop\\gabrielfelipe16\\agendatelefonicaatualizada\\view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10125B39-D080-4EFD-B998-F91CD7E3B4B0}|projetoAgendaSolo.csproj|solutionrelative:view\\frm_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,28 +37,31 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frm_cadastro.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs",
-              "RelativeDocumentMoniker": "View\\frm_cadastro.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs*",
-              "RelativeToolTip": "View\\frm_cadastro.cs*",
-              "ViewState": "AgIAAC0AAAAAAAAAAAA0wDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T14:45:30.706Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frm_cadastro.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs",
+              "DocumentMoniker": "C:\\Users\\SENAI\\Desktop\\GabrielFelipe16\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs",
               "RelativeDocumentMoniker": "View\\frm_cadastro.cs",
-              "ToolTip": "C:\\Users\\gabri\\Desktop\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs [Projeto]*",
-              "RelativeToolTip": "View\\frm_cadastro.cs [Projeto]*",
+              "ToolTip": "C:\\Users\\SENAI\\Desktop\\GabrielFelipe16\\agendaTelefonicaAtualizada\\View\\frm_cadastro.cs [Projeto]",
+              "RelativeToolTip": "View\\frm_cadastro.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T14:45:28.634Z",
+              "WhenOpened": "2024-12-02T18:33:19.028Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_login.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\SENAI\\Desktop\\GabrielFelipe16\\agendaTelefonicaAtualizada\\View\\frm_login.cs",
+              "RelativeDocumentMoniker": "View\\frm_login.cs",
+              "ToolTip": "C:\\Users\\SENAI\\Desktop\\GabrielFelipe16\\agendaTelefonicaAtualizada\\View\\frm_login.cs [Projeto]*",
+              "RelativeToolTip": "View\\frm_login.cs [Projeto]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T18:32:27.812Z",
               "EditorCaption": " [Projeto]"
             }
           ]

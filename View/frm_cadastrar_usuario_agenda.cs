@@ -30,12 +30,7 @@ namespace projetoAgendaSolo.View
             }
         }
 
-        public frm_cadastrar_contato_agenda()
-        {
-            InitializeComponent();
-        }
-
-        private void btn_cadastrar_Click(object sender, EventArgs e)
+        private void cadastraContato()
         {
             AgendaController addContato = new AgendaController();
 
@@ -52,6 +47,16 @@ namespace projetoAgendaSolo.View
                     janela_agenda.ShowDialog();
                 }
             }
+        }
+
+        public frm_cadastrar_contato_agenda()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            cadastraContato();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -74,6 +79,14 @@ namespace projetoAgendaSolo.View
         private void mtb_telefone_TextChanged(object sender, EventArgs e)
         {
             verificaCadastroValido();
+        }
+
+        private void txt_campo_categoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cadastraContato();
+            }
         }
     }
 }

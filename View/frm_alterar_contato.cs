@@ -32,27 +32,7 @@ namespace projetoAgendaSolo.View
             }
         }
 
-        public void carregarInformacoes()
-        {
-            txt_campo_nome.Text = informationsAlterContato.nome;
-            mtb_telefone.Text = informationsAlterContato.telefone;
-            txt_campo_categoria.Text = informationsAlterContato.categoria;
-        }
-
-
-        public frm_alterar_contato()
-        {
-            InitializeComponent();
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            frm_agenda janela_agenda = new frm_agenda();
-            this.Hide();
-            janela_agenda.ShowDialog();
-        }
-
-        private void btn_alterar_Click(object sender, EventArgs e)
+        private void alterarContato()
         {
             DialogResult resultado = MessageBox.Show(
                     "Você confirma as informações alteradas?",
@@ -89,6 +69,31 @@ namespace projetoAgendaSolo.View
             }
         }
 
+        public void carregarInformacoes()
+        {
+            txt_campo_nome.Text = informationsAlterContato.nome;
+            mtb_telefone.Text = informationsAlterContato.telefone;
+            txt_campo_categoria.Text = informationsAlterContato.categoria;
+        }
+
+
+        public frm_alterar_contato()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            frm_agenda janela_agenda = new frm_agenda();
+            this.Hide();
+            janela_agenda.ShowDialog();
+        }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            alterarContato();
+        }
+
         private void frm_alterar_contato_Load(object sender, EventArgs e)
         {
             carregarInformacoes();
@@ -112,6 +117,14 @@ namespace projetoAgendaSolo.View
         private void txt_campo_categoria_TextChanged(object sender, EventArgs e)
         {
             verificaCadastroValido();
+        }
+
+        private void btn_concluir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                alterarContato();
+            }
         }
     }
 }
